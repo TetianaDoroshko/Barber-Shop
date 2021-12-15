@@ -1,0 +1,14 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: tomato;
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+
+* {
+  color: teal;
+}
