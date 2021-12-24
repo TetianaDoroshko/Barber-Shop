@@ -79,7 +79,20 @@ img {
   color: #ffffff;
   background-color: var(--accent-color);
 }
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 /* hero */
+.hero-container {
+  display: flex;
+}
+.hero-right {
+  flex-grow: 1;
+  padding: 272px 0 206px 96px;
+  background-color: #28292b;
+}
 .hero-link {
   font-family: Open Sans;
   font-style: normal;
@@ -96,7 +109,6 @@ img {
 }
 
 .hero {
-  background-color: #28292b;
 }
 .hero-pre-title {
   font-family: Open Sans;
@@ -295,6 +307,17 @@ img {
 .masters {
   padding: 130px 0;
 }
+.masters-list {
+  display: flex;
+}
+.masters-item {
+  width: calc((100%-30 * 3) / 3);
+}
+
+.masters-item:not(:last-cild) {
+  margin-right: 30px;
+}
+
 .masters-pre-title {
   font-family: Open Sans;
   font-style: normal;
