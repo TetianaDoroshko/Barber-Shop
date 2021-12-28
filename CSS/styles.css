@@ -72,7 +72,10 @@ img {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #28292b;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  padding: 12px 20px;
 }
 .header-button:hover,
 .header-button:focus {
@@ -83,6 +86,24 @@ img {
   display: flex;
   align-items: center;
 }
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-logo-link {
+  margin-right: 70px;
+}
+.header-tel {
+  margin-left: auto;
+  margin-right: 50px;
+}
+.header-item:not(:last-child) {
+  margin-right: 40px;
+}
 
 /* hero */
 .hero-container {
@@ -92,6 +113,9 @@ img {
   flex-grow: 1;
   padding: 272px 0 206px 96px;
   background-color: #28292b;
+}
+.hero-list {
+  width: 93px;
 }
 .hero-link {
   font-family: Open Sans;
@@ -137,10 +161,15 @@ img {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+  max-width: 400px;
 }
 /* About us */
-.about {
-  padding: 139px 0 121px 0;
+.about,
+.prices,
+.reasons,
+.masters,
+.gallery {
+  padding: 130px 0;
 }
 .about-pre-title {
   font-family: Open Sans;
@@ -192,10 +221,26 @@ img {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #303030;
-  background-color: #ffffff;
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  padding: 12px 20px;
 }
 .about-button:hover {
   background-color: var(--accent-color);
+  color: var(--first-title-color);
+}
+.about-body {
+  display: flex;
+}
+.about-list {
+  display: flex;
+}
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+.about-description {
+  margin-left: 64px;
 }
 /* Prices */
 .prices {
@@ -249,6 +294,7 @@ img {
   color: #ffffff;
   background-color: var(--accent-color);
 }
+
 /* reasons */
 .reasons {
   padding-top: 121px;
@@ -314,7 +360,7 @@ img {
   width: calc((100%-30 * 3) / 3);
 }
 
-.masters-item:not(:last-cild) {
+.masters-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -385,6 +431,14 @@ img {
   text-transform: uppercase;
   color: #303030;
   margin-bottom: 44px;
+}
+.gallery-list {
+  display: flex;
+  margin-right: -30px;
+}
+.gallery-list .item {
+  width: calc(100% / 4 - 30px);
+  margin-right: 30px;
 }
 /* Contacts */
 .contacts {
