@@ -38,7 +38,6 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
 }
 .pre-title {
   font-family: Open Sans;
@@ -91,8 +90,10 @@ img {
 /* Header */
 
 .header {
-  background-color: rgb(40, 41, 39);
   padding: 32px 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
 }
 .header-link,
 .header-tel {
@@ -102,6 +103,7 @@ img {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: #ffffff;
+  transition: color 350ms ease;
 }
 .header-link:hover,
 .header-link:focus,
@@ -112,10 +114,10 @@ img {
 
 .header-button {
   color: #ffffff;
+  transition: background-color 350ms ease;
 }
 .header-button:hover,
 .header-button:focus {
-  color: #ffffff;
   background-color: var(--accent-color);
 }
 .header-container {
@@ -140,6 +142,17 @@ img {
 .header-item:not(:last-child) {
   margin-right: 40px;
 }
+.current {
+  position: relative;
+  color: var(--accent-color);
+}
+.current::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent-color);
+}
 
 /* hero */
 .hero-container {
@@ -155,10 +168,28 @@ img {
   background-position: center;
   background-repeat: no-repeat;
 }
-.hero-list {
+.hero-left {
   width: 93px;
   display: flex;
-  flex-direction: column-reverse;
+  align-items: flex-end;
+  padding-left: 23px;
+  padding-bottom: 40px;
+}
+.hero-list {
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg) translateX(-15px);
+  transform-origin: top left;
+}
+.hero-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  margin-right: 40px;
+}
+.hero-item + .hero-item {
+  margin-left: 40px;
 }
 .hero-link {
   font-family: Open Sans;
@@ -169,6 +200,7 @@ img {
   letter-spacing: 0.2em;
   color: var(--second-title-color);
   text-decoration: none;
+  transition: color 350ms ease;
 }
 .hero-link:hover,
 .hero-link:focus {
@@ -219,6 +251,7 @@ img {
 .about-button {
   color: #303030;
   border: 1px solid var(--accent-color);
+  transition: background-color 350ms ease, color 350ms ease;
 }
 .about-button:hover {
   background-color: var(--accent-color);
@@ -304,10 +337,10 @@ img {
   border: 1px solid var(--accent-color);
   display: block;
   margin: 0 auto;
+  transition: background-color 350ms ease, color 350ms ease;
 }
 .prices-button:hover,
 .prices-button:focus {
-  color: #ffffff;
   background-color: var(--accent-color);
 }
 
@@ -361,7 +394,30 @@ img {
 .masters-item:not(:last-child) {
   margin-right: 30px;
 }
-
+.masters-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.masters-img-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #ff6a0059;
+  color: #ffffff;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  transform: translateY(100%);
+  transition: transform 350ms ease, color 350ms ease;
+}
+.masters-item:hover .masters-img-text {
+  transform: translateY(0);
+}
 .masters-pre-title {
   color: #303030;
   margin-bottom: 20px;
@@ -410,6 +466,7 @@ img {
   justify-content: center;
   align-items: center;
   color: #303030;
+  transition: color 350ms ease, color 350ms ease;
 }
 .masters-social-link:hover,
 .masters-social-link:focus {
@@ -497,4 +554,46 @@ img {
   margin-bottom: 20px;
   color: #ffffff;
   display: flex;
+}
+/* Modal window */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 127, 80, 0.39);
+  transition: opacity 500ms ease, visibility 500ms ease;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  min-height: 600px;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 500ms ease;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: 0;
+  pointer-events: none;
+}
+.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background-image: url(../Images/close.svg);
+  background-color: transparent;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
