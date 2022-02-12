@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./CSS/styles.css">
+    <!-- <link rel="stylesheet" href="./CSS/styles.css"> -->
+    <link rel="stylesheet" href="./CSS/main.min.css">
 </head>
 
 <body>
@@ -33,7 +34,7 @@
     </header>
     <main>
         <!-- Hero -->
-        <section class="hero ">
+        <!-- <section class="hero ">
             <div class="container hero-container">
                 <div class="hero-left">
                     <ul class="list hero-list">
@@ -48,7 +49,7 @@
                     Работаем быстро, осторожно и со вкусом.</p>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- About us -->
         <section class="about">
             <div class="container about-body">
@@ -119,26 +120,32 @@
         </section>
         <!-- Наши преимущества -->
         <section class="reasons">
-            <div class="container">
-                <li class="reasons-item">
-                    <span class="reasons-digit">600</span>
-                    <p class="reasons-item-text">Довольных клиентов в день</p>
-                </li>
-                <li><span class="reasons-digit">50</span>
-                    <p class="reasons-item-text">Наград за отличный сервис</p>
-                </li>
-                <li>
-                    <span class="reasons-digit">20</span>
-                    <p class="reasons-item-text">Лучших мастеров Киева</p>
-                </li>
-                <li>
-                    <span class="reasons-digit">100</span>
-                    <p class="reasons-item-text">Подарков постоянным клиентам</p>
-                </li>
-            </ul>
-            <p class="reasons-pre-title pre-title">старая традиционная школа</p>
-            <h2 class="reasons-title section-title">Почему приходят именно к нам?</h2>
-            <p class="reasons-after-title after-title">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
+            <div class="container reasons-container">
+                <div class="reasons-left">
+                    <ul class="list reasons-list">
+                        <li class="reasons-item">
+                            <span class="reasons-digit">600</span>
+                            <p class="reasons-item-text">Довольных клиентов в день</p>
+                        </li>
+                        <li class="reasons-item">
+                            <span class="reasons-digit">50</span>
+                            <p class="reasons-item-text">Наград за отличный сервис</p>
+                        </li>
+                        <li class="reasons-item">
+                            <span class="reasons-digit">20</span>
+                            <p class="reasons-item-text">Лучших мастеров Киева</p>
+                        </li>
+                        <li class="reasons-item">
+                            <span class="reasons-digit">100</span>
+                            <p class="reasons-item-text">Подарков постоянным клиентам</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reasons-right">
+                    <p class="reasons-pre-title pre-title">старая традиционная школа</p>
+                    <h2 class="reasons-title section-title">Почему приходят именно к нам?</h2>
+                    <p class="reasons-after-title after-title">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
+                </div>
             </div>
         </section>
         <!-- Наши мастера -->
@@ -243,7 +250,7 @@
         </div>
     </footer>
     <!-- Modal window -->
-    <div class="backdrop " data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="close-btn" data-modal-close>
               <svg class="icon-close" width="15" height="15"><use href="./Images/symbol-defs.svg#icon-close"></use></svg>  
@@ -295,3 +302,4 @@
 <!-- https://www.figma.com/file/cM7nu3kMYRxRhwBhtKkP9m/Barbershop_v1-(Copy)-(Copy)?node-id=1%3A2 -->
 
 
+ 

@@ -1,0 +1,19 @@
+.pre-title {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+}
+.pre-title::before {
+  content: '';
+  width: 63px;
+  height: 1px;
+  background-color: currentColor;
+  align-self: center;
+  margin-right: 21px;
+  display: block;
+}

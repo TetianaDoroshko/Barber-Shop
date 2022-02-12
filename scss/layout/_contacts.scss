@@ -1,0 +1,38 @@
+.contacts {
+  background-color: #191c26;
+  background-image: url(../Images/Bg-contacts.png);
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-size: calc(50% - 15px);
+
+  padding: 130px 0;
+}
+.contacts-title {
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+.contacts-block {
+  width: calc(50% - 15px);
+  padding-left: 100px;
+}
+
+.contact-link {
+  display: block;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+.contact-list-item + .contact-list-item {
+  margin-top: 20px;
+}
+.contacts-worktime {
+  display: inline-block;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  display: flex;
+}

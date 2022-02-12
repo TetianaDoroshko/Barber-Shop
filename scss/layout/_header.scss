@@ -1,0 +1,66 @@
+/* Header */
+
+.header {
+  padding: 32px 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.header-link,
+.header-tel {
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  transition: color 350ms ease;
+}
+.header-link:hover,
+.header-link:focus,
+.header-tel:hover,
+.header-tel:focus {
+  color: var(--accent-color);
+}
+
+.header-button {
+  color: #ffffff;
+  transition: background-color 350ms ease;
+}
+.header-button:hover,
+.header-button:focus {
+  background-color: var(--accent-color);
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-logo-link {
+  margin-right: 70px;
+}
+.header-tel {
+  margin-left: auto;
+  margin-right: 50px;
+}
+.header-item:not(:last-child) {
+  margin-right: 40px;
+}
+.current {
+  position: relative;
+  color: var(--accent-color);
+}
+.current::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent-color);
+}

@@ -1,0 +1,54 @@
+/* About us */
+.about,
+.reasons,
+.masters,
+.gallery {
+  padding: 130px 0;
+}
+.about-pre-title {
+  color: #303030;
+  margin-bottom: 20px;
+}
+.about-title {
+  color: #303030;
+  margin-bottom: 20px;
+}
+.about-after-title {
+  color: #555555;
+  margin-bottom: 20px;
+}
+.about-text {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin-bottom: 40px;
+}
+.about-button,
+.send-button,
+.reset-button {
+  color: #303030;
+  border: 1px solid var(--accent-color);
+  transition: background-color 350ms ease, color 350ms ease;
+}
+.about-button:hover,
+.send-button:hover,
+.reset-button:hover {
+  background-color: var(--accent-color);
+  color: var(--first-title-color);
+}
+.about-body {
+  display: flex;
+}
+.about-list {
+  display: flex;
+}
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+.about-description {
+  margin-left: 64px;
+}

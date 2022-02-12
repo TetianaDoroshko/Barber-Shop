@@ -1,0 +1,70 @@
+/* Contacts SECTION */
+.contacts-body {
+  display: flex;
+}
+/* Sign-up section */
+.sign-up {
+  flex-grow: 1;
+  padding-right: 40px;
+}
+.sign-up-title {
+  color: var(--first-title-color);
+  padding-bottom: 44px;
+}
+.online-input-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+.online-name,
+.online-tel,
+.online-text {
+  flex-basis: 265px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+  transition: border-color 500ms, color 500ms;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  outline: none;
+}
+.area {
+  height: 76px;
+  width: 100%;
+  resize: none;
+  margin-bottom: 44px;
+}
+.online-name::placeholder,
+.online-tel::placeholder,
+.online-text::placeholder {
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+  transition: color 500ms;
+}
+.online-name:focus::placeholder,
+.online-tel:focus::placeholder,
+.online-text:focus::placeholder,
+.online-name:hover::placeholder,
+.online-tel:hover::placeholder,
+.online-text:hover::placeholder {
+  color: #ffffff;
+}
+
+.online-name:focus,
+.online-tel:focus,
+.online-text:focus,
+.online-name:hover,
+.online-tel:hover,
+.online-text:hover {
+  border-color: #ffffff;
+}
+
+.online-button {
+  margin: 0;
+}
